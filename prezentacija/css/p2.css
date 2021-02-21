@@ -1,0 +1,188 @@
+@font-face {
+    font-family: PoiretOne;
+    src: url('PoiretOne-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/******* OMOTAC SADRZAJA ******/
+#glavni_omotac{
+    width: 1000px;
+    margin: auto;
+    min-height:100%;
+    position: relative;
+}
+
+/****** DEKORACIJA *********/
+#dekoracija{
+    background-image: url("../images/sarica.gif");
+    height: 56px;
+    width: 100%;
+    background-repeat: repeat-x;
+}
+
+
+/****** NASLOV *********/
+#naslov{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'PoiretOne', cursive;
+    letter-spacing: 2px;
+    font-size: 60px;
+    color: #444444;
+}
+
+
+/****** NAVIGACIJA ******/
+.ui-corner-all{
+    border-width: 0px;
+    padding: 0px;
+}
+.ui-tabs .ui-tabs-nav {
+    border-width:0px;
+    background-color: #FFFFFF;
+    border-bottom-width: 6px;
+    border-bottom-color: #F2A81D;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding:0px;
+}
+
+.ui-tabs .ui-tabs-nav li{
+    text-transform: uppercase;
+    font-size: 14px;
+    border-top-right-radius: 20px;
+    border-color: #F2A81D;
+    margin-right: 5px;
+}
+
+/* za postavljanje boje jednog tab-a */
+.ui-tabs .ui-tabs-nav li:nth-child(1){
+    background-color: #F2A81D;
+}
+
+.ui-tabs .ui-tabs-nav li:nth-child(2){
+    background-color: #F2A81D;
+}
+
+.ui-tabs .ui-tabs-nav li:nth-child(3){
+    background-color: #F2A81D;
+}
+
+.ui-tabs .ui-tabs-nav li:nth-child(4){
+    background-color: #F2A81D;
+}
+
+.ui-tabs .ui-tabs-nav li:nth-child(5){
+    background-color: #F2A81D;
+}
+
+.ui-tabs .ui-tabs-nav li:nth-child(6){
+    background-color: #F2A81D;
+}
+
+.ui-tabs .ui-tabs-nav li a{
+    color: #FFFFFF;
+}
+
+/******** PODESAVANJA SVIH KARTICA */
+#kartice{
+    padding-bottom: 50px;
+}
+
+#o_kursu, #obaveze_studenata, #predavanja, #vezbe, #praktikumi, #obavestenja{
+    border: 2px dotted #F2A81D;
+    border-top-width: 0px;
+    min-height: 900px;
+    font-size: 15px;
+    color: #444444;
+}
+
+
+/******** O KURSU ***************/
+#o_kursu ul{
+    list-style-type: square;
+}
+
+#o_kursu ul a{
+    text-decoration: none;
+}
+
+#o_kursu ul a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*****  OBAVESTENJA ***********/
+.obavestenje{
+    border-bottom: 1px solid #F2A81D;
+    color: #444444;
+    padding: 10px;
+}
+
+.obavestenje .datum_objavljivanja{
+    padding:0px;
+    margin:0px;
+    font-size: 10px;
+    text-align:right;
+}
+
+
+/******* POJEDINACNI CASOVI VEZBI I PRAKTIKUMA *******/
+.cas{
+}
+
+.cas h4.naslov{
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.cas ul{
+    margin-top: 0px;
+}
+.cas ul li{
+    list-style-type: square;
+}
+
+.cas a:link, .cas:visited, .cas:active{
+    text-decoration: none;
+}
+.cas a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/********* DNO STRANE *******/
+#podnozje{
+    text-align: center;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 5px;
+}
+
+#podnozje .matf{
+    font-family: 'Tahoma', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #444444;
+}
+
+
+.mali_naslov_sekcije{
+    font-weight: bold;
+}
+
+ul li{
+    list-style-type:square;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

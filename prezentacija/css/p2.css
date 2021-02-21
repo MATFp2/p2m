@@ -82,7 +82,7 @@
 }
 
 .ui-tabs .ui-tabs-nav li a{
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 /******** PODESAVANJA SVIH KARTICA */
@@ -180,7 +180,7 @@ ul li{
 
 ul li a{
     text-decoration: none;
-    color: #e48c1b;
+    color: #e48c1b !important;
 }
 
 ul li a:hover{

@@ -1,0 +1,3 @@
+Ovo bi bio neki tekst koji ce nas program da procita i da sortira. U zavisnosti
+ od naseg izbora sortiranje ce se vrsiti leksikografski, bilo po duzini, bilo po
+  duzini i potom leksikografski

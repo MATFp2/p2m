@@ -1,0 +1,4 @@
+Ovo bi bio neki tekst koji ce nas program da procita i da sortira leksikografski
+i  po duzini. Nekoliko recenica se nalazi u ovom dokumentu, sa recima razlicitih duzina,
+ali sasvim dovoljno da istestiramo rad funkcija za sortiranje i pretrazivanje koje su
+implementirane u standardnoj C bibilioteci.

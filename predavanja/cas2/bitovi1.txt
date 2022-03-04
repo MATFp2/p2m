@@ -1,0 +1,65 @@
+
+&& logicka i
+& bitovsko i
+
+74  --- 0100 1010 = 0x4A = 2^6 + 2^3 + 2^1 = 64+8+2 
+87  --- 0101 0111 = 0x57 = 2^6 + 2^4 + 2^2 + 2^1 + 2^0 = 64+16+4+2+1
+&   -------------
+66  --- 0100 0010 = 0x42
+
+--------------------------------
+
+| bitovsko ili
+
+74  --- 01001010
+87  --- 01010111
+|   --------------
+        01011111
+
+--------------------------------
+
+^ bitovsko ekskluzivno ili
+
+  rezultat je 1 akko su bitovi razliciti, inace je 0
+  0^1 = 1, 1^0 = 1, 0^0 = 0, 1^1 = 0
+
+74  --- 01001010
+87  --- 01010111
+^   --------------
+        00011101
+
+--------------------------------
+
+~ jedinicni komplement
+
+74  --- 01001010
+~   --------------
+        10110101
+
+
+--------------------------------
+
+<< pomeranje (siftovanje) ulevo
+
+x << n
+x << 1
+
+
+>> pomeranje (siftovanje) udesno
+
+x >> n
+
+logicko pomeranje - ako je x neoznacen ili oznacen sa nenegativnom vrednoscu
+pocetni bitovi se popunjavaju nulama
+efekat je x >> n = x div 2^n (celobrojno deljenje)
+
+aritmeticko pomeranje - ako je x oznacen sa negativnom vrednoscu
+
+a &= 1 isto kao a = a & 1
+... x2x1 x0
+000...00 1
+-----------
+000000000x0
+
+a = a & (1 << 1)
+

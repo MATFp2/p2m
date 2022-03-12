@@ -1,0 +1,99 @@
+
+000   100
+001   101
+010   110
+011   111
+100
+101
+110
+111
+
+bit na poziciji 0 - da li pada kisa (ako je postavljen na 1 kisa pada, 0 ne pada)
+bit na poziciji 1 - da li je magla (1 jeste, 0 nije)
+bit na poziciji 2 - da li je poledica (1 jeste, 0 nije)
+
+int x;   
+
+
+alternativa:
+int pada_kisa = 0;
+int magla = 1; 
+int poledica = 0;
+
+
+8 bita, pozicije od 0 do 7
+
+flag0 = 00000001
+flag1 = 00000010
+flag2 = 00000100
+flag3 = 00001000
+...
+
+
+#define flag0 (1 << 0)  // 1
+#define flag1 (1 << 1)  // 2
+#define flag2 (1 << 2)  // 4
+#define flag3 (1 << 3)  // 8
+#define flag4 (1 << 4)  // 16
+#define flag5 (1 << 5)  // 32
+#define flag6 (1 << 6)  // 64
+#define flag7 (1 << 7)  // 128
+
+- ukljucivanje - postavljanje flag na 1, na True
+
+...f...
+maska = flagN
+...1...
+
+...f...
+00010000
+rezultat
+...1...
+
+x = x | flagN 
+
+- iskljucivanje - postavljanje flag na 0, na False
+
+00001000 - flagN
+
+
+....f... - x
+11110111 - ~flagN
+&
+....0....
+
+x = x & ~flagN
+
+- invertovanje
+
+....f... - x
+00001000 - flagN
+^
+....(~f)...
+
+ako su razliciti rezultat je 1, ako su isti rezultat je 0
+(iz maske ^ iz x)
+0^0 = 0
+0^1 = 1
+ako je prvi argument ^ jednak 0, onda se drugi argument NE MENJA
+1^0 = 1
+1^1 = 0
+ako je prvi argument ^ jednak 1, onda se drugi argument INVERTUJE
+
+
+- provera da li je flag postavljen
+
+x = x & flagN
+ako je rezultat 0 onda f nije bio postavljen - false
+ako je razlicit od 0 onda je f bio postavljen - true
+
+
+00001000
+00000010
+--------
+00001010
+
+f_kombinovani = flag3 | flag1 
+
+
+			   

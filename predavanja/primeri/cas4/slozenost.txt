@@ -1,0 +1,38 @@
+Operatori navedeni po brzini izvrsavanja:
+
+&, |, <<, >>
++, -
+*, /, %
+
+Rucna optimizacija (koja se cesto izvrsava i u okviru kompilacije):
+
+j = 2*i --> j = i<<1
+
+k = i/4 --> k = i>>2
+
+SLOZENOST ALGORITAMA:
+
+parametar x, y, z, n, m, k
+
+- procena broja operacija koje program izvrsava
+u zavisnosti od parametar naseg programa - vrednost n
+
+broj_operacija(P, n) = ???
+
+Nekoliko primera:
+
+1. naci x u nizu a [_,_,_,..._], a niz duzine n --- parametar n je duzina niza
+broj koraka je u najgorem slucaju jednak n
+
+2. proizvod brojeva od 1 do n
+broj koraka je uvek jednak n
+--- parametar n je vrednost broja koji se unosi
+
+3. _,_,..._,_
+broj koraka je broj bitova u konkretnom racunaru
+
+
+NAJGORI MOGUCI SLUCAJ I MAKSIMALAN BROJ OPERACIJA
+- vreme izvrsavanja programa  --- VREMENSKA SLOZENOST 
+- velicina zauzete memorije   --- MEMORIJSKA SLOZENOST
+

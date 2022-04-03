@@ -1,0 +1,235 @@
+/*
+Poredjenje elemenata:
+
+niz celih brojeva:
+3, 2, 1, 6, 7, 8 - poredjenje celih brojeva, a[i] < a[j]
+
+niz niski:
+aab, cba, aefa, ojill, ad - poredjenje niski: po duzini, leksikografski
+
+niz struktura:
+- niz studenata 
+
+*/
+
+typedef struct student {
+  char smer[10];
+  char ime[20]; 
+};
+
+// 1 - isti su studenti
+// 0 - razliti su studenti
+int jednaki_studenti(const student *s1, const student *s2){
+  return (!strcmp(s1->ime,s2->ime) && !strcmp(s1->smer, s2->smer));
+}
+    
+
+
+
+/*
+- niz razlomaka
+
+fja koja vraca 0 ili 1 u zavisnosti od toga da li su isti - slajdovi
+
+
+- niz datuma
+
+-- fja koja vraca 0 ili 1 
+domaci: fja jednaki_datumi...
+
+-- domaci: fja koja poredi dva studenta po imenu
+-- ... po smeru
+
+relacija poredjenja ==, !=
+relacija poretka <, >, <=, >=
+
+ */
+
+
+/*
+
+PRETRAGA NIZA
+
+niz celih brojeva, relacija poredjenja ==
+-> alternativa:    svojstvo P
+
+Problem: niz a, ceo broj x
+Pronaci indeks (prvog pojavljivanja) elementa niza a na kome se nalazi broj x
+ako se nalazi x:      0<= i <= n-1
+ako se ne nalazi x:   vratite -1
+                      vratite "nema"
+                      vratite "NEMA"
+
+a = [5,1,3,4], x = 6 --> -1
+             , x = 5 --> 0
+               x = 3 --> 2
+
+niz neuredjen - linearna pretraga niza (sekvencijalna pretraga niza)
+
+linearna pretraga ima linearno vreme izvrsavanja = O(n)
+
+*/
+
+int pretraga(int a[], int n, int x){
+  int i;
+  for (i=0; i<n; i++){
+    if (a[i] == x)       // FJA POREDJENJA
+      return i;
+  }
+
+  return -1;  
+}
+
+int pretraga_sa_greskom(int a[], int n, int x){
+  int i;
+
+  for (i=0; i<n; i++)
+    if (a[i] == x)
+      return i;
+    else  //NIJE ISPRAVNO!!!!
+      return -1;  
+}
+
+// a = [1,2,3], x = 1 -> vraca 0
+// a = [1,2,3], x = 4 --> vraca -1
+
+// obavezno proverite: i=0, i=n-1, 0<i<n-1, -1
+
+
+
+
+/*
+POREDJENJE ELEMENTA NIZA SA ZADATOM VREDNOSCU: 
+
+-- domaci: niz niski, relacija leksikografskog poredjenja
+-- ...     niz struktura, relacija poredjenja studenata (prvo po imenu pa onda po smeru)
+
+-- domaci: poslednje pojavljivanje elementa u nizu
+a = [1,2,1,3,1], x = 1 
+
+SVOJSTVO ELEMENTA NIZA:
+
+-- pozicija prvog elementa u nizu koji je paran
+-- ...                                 se zavrsava nulom
+
+
+ODREDJIVANJE MAX ILI MIN NIZA
+
+[1,2,3,4,3]
+
+-- naci vrednost maksimalnog elementa niza --> 4
+-- naci indeks maksimalnog elementa niza --> 3
+
+-- naci indekse dva najmanja elementa niza 
+-- naci vrednosti dva najmanja elementa niza (lakse)
+
+
+-- sve primere smo radili nad elementima niza
+-- moguce je uraditi bez nizova, samo kroz petlju koja ucitava brojeve sa standardnog ulaza (dok se ne unese 0) 
+-- domaci: probajte nalazenje minimalnog elementa 
+
+ */
+
+
+ /*
+   BINARNA PRETRAGA
+    l=0              d=5
+a = [1, 4, 6, 8, 10, 12]
+a = [elementi manji od sredisnjeg, sredisnji element, elementi veci od sredisnjeg]
+
+
+TEHNIKA DVA POKAZIVACA:
+strogo rastuci niz
+
+-- domaci: problem nalazenja parova elemenata niza ciji je zbir jednak zadatom broju
+a = [1,2,3,4,5], s = 7
+parovi su: 
+2 i 5
+3 i 4
+
+neefikasna implementacija: dvostruka for petlja - kvadratna slozenost 
+prva petlja krece od 0, druga od 0
+
+malo efikasnija implementacija: dvostruka for petlja - druga krece od i+1 
+
+najefikasnija implementacija: tehnika dva pokazivaca
+     L       D
+a = [1,2,3,4,6], s = 7
+     0       4   --> a[0] + a[4] = 7 --- nasli smo ih, pomeramo se na unutra
+                                         l++;
+					 d--;
+       1   3     --> a[1] + a[3] = 6 --- vrednost je manja od trazenog zbira
+                                         onda se pomera levi udesno:
+					 l++
+                                     --- ako je vrednost veca od trazenog zbira
+                                         onda se desni pomera ulevo: 
+					 d--
+
+
+  */
+
+
+ /*
+MERGE SORT
+
+1 napisati fju koja spaja dva sortirana niza u treci novi niz
+2 napisati rekurzivnu fju koja sortira dati niz koriscenjem prethodne fje
+
+
+1. 
+
+
+a[1,4,5] b[2,3,6, 8]
+        i      j
+        3      2
+
+[1,2,3,4,5,...]
+ k
+ 0
+
+domaci: 
+- sami da napisete tu fju 1
+- fju 2
+
+
+
+
+  */
+
+
+ /*
+   QUICK SORT
+
+P??????????? [5,4,1,7,3,9]
+<<<<<P>>>>>> 
+
+P = 5        [4,1,3,5,7,9]   --- sigurno vrednost 5 na svom mestu
+             [4,1,3]_[7,9]
+
+P<<<<<>>>>>>>
+P????????????
+ <          >
+ L          D
+ L++        D--
+
+
+
+[5,4,1,7,3,9]
+   L       D
+   <       >
+     L   D
+     <   <
+       L
+       >
+
+[5,4,1,3,7,9]
+
+[3,4,1,5,7,9]
+
+
+
+drugi primer: 
+[5,4,1,7,  6,9]
+   < < L   D > 
+   < < L=D > >
+  */

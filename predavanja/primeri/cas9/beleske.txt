@@ -1,0 +1,53 @@
+﻿3 + 4 – INFIKSNI ZAPIS aritmetickog izraza
++ 3 4 – PREFIKSNI ZAPIS aritmetickog izraza
+3 4 + – POSTFIKSNI ZAPIS aritmetickog izraza
+
+dozvoljene operacije: + i *
+dozvoljeni operandi: prirodni brojevi
+
++ 3 4
+
+   +
+ /   \
+3     4
+
+3 * (4 + 2)  = 18
+* 3 + 4 2
+
+Koren, Levo, Desno - prefiksni
+Levo, Koren, Desno - infiksni
+Levo, Desno, Koren - postfiksni
+
+       *
+     /   \
+   3      +
+        /   \
+       4     2
+
+
+
+(3 + 4) * 2
+* + 3 4 2
+
+       * 
+    /    \
+   +      2
+ /   \
+3     4  
+
+
+
+
+ 3 
+.  \
+    6
+   . \
+      10
+      .  \ 
+         18
+
+
+    6
+  /   \
+ 3     10
+

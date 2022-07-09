@@ -90,7 +90,7 @@
     padding-bottom: 50px;
 }
 
-#o_kursu, #obaveze_studenata, #predavanja, #vezbe, #snimci, #obavestenja{
+#o_kursu, #obaveze_studenata, #predavanja, #vezbe, #snimci, #obavestenja, #rezultati{
     border: 2px dotted #F2A81D;
     border-top-width: 0px;
     min-height: 900px;

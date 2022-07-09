@@ -81,6 +81,10 @@
     background-color: #F2A81D;
 }
 
+.ui-tabs .ui-tabs-nav li:nth-child(7){
+    background-color: #F2A81D;
+}
+
 .ui-tabs .ui-tabs-nav li a{
     color: #FFFFFF !important;
 }

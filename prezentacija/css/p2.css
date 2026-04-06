@@ -94,7 +94,7 @@
     padding-bottom: 50px;
 }
 
-#o_kursu, #obaveze_studenata, #predavanja, #vezbe, #snimci, #obavestenja, #rezultati{
+#o_kursu, #obaveze_studenata, #predavanja, #vezbe, #snimci, #obavestenja, #rezultati, #kutak-dobre-namere{
     border: 2px dotted #F2A81D;
     border-top-width: 0px;
     min-height: 900px;
@@ -190,4 +190,24 @@ ul li a{
 ul li a:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+
+#uputstva{
+    min-height: 1200px;
+    font-size: 15px;
+    color: #444444;
+    font-family: 'Tahoma', sans-serif;
+}
+.uputstvo{
+   min-height: 1000px;
+   border: 2px dotted #F2A81D;
+  padding: 0px 20px 0px;
+}
+
+.uputstvo h4, .uputstvo h2{
+	color: #F2A81D;
+}
+
+.uputstvo p{
+    text-align: justify;
 }
